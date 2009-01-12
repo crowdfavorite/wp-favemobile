@@ -21,7 +21,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 ?>
 <hr />
 
-<div class="tabbed">
+<div class="tabbed group">
 	<ul class="tabs">
 		<li class="active"><a href="#recent">Recent Posts</a></li>
 		<li><a href="#pages">Pages</a></li>

@@ -18,17 +18,15 @@
 */
 
 body {
+	background:#e5e5e5 url(../images/background.png);
 	font-size:12px;
 	line-height:1.5;
 	color:#333;
 	margin:0;
 }
-body#is-list {
-	background:#eee;
-}
 h1 {font-size:18px;}
 hr {display:none;}
-a {color:#2761FE;}
+a {color:blue;}
 blockquote {
 	border-left:2px solid #ddd;
 	margin:0 0 0 5px;
@@ -47,27 +45,37 @@ p, li {
 .hide {
 	display: none;
 }
-.table-title {
+.table-title,
+.content {
 	color:#777;
 	font-size:1em;
 	line-height:1.5;
-	margin:20px 25px 10px;
+	margin:10px 25px 10px;
+	text-shadow: 1px 1px 2px #fff;
+}
+.table-title {
+	margin-top:20px;
+}
+.group {
+	background:#fff;
+	border:1px solid #ccc;
+	border-radius:10px;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	overflow:hidden;
+	margin:10px;
+	padding:10px;
+}
+ul.table.group {
+	margin:10px;
+	padding:0;
 }
 ul.table {
-	background:#fff;
 	clear:both;
 	color:#999;
 	list-style:none;
 	margin:0;
 }
-ul.table.group {
-	border:1px solid #ccc;
-	border-radius:10px;
-	margin:10px;
-	-moz-border-radius:10px;
-	-webkit-border-radius:10px;
-}
-#content ul.table.group {margin:10px 0;}
 ul.table li {
 	border-bottom:1px solid #ccc;
 	padding:15px;
@@ -98,7 +106,7 @@ ul.table li.disclosure a span.date {
 	color:#999;
 	font-size:10px;
 	font-weight:normal;
-	margin:10px -10px;
+	margin:0 -10px;
 }
 .title-divider span {
 	background:#fff;
@@ -142,10 +150,17 @@ ul.table li.disclosure a span.date {
 }
 
 #next-prev-top {
-	background:#ddd;
-	border-bottom:1px solid #ddd;
+	background:#fff;
+	border:1px solid #ccc;
+	border-width:0 1px 1px;
+	border-bottom-left-radius:10px;
+	border-bottom-right-radius:10px;
+	-webkit-border-bottom-left-radius:10px;
+	-webkit-border-bottom-right-radius:10px;
+	-moz-border-radius-bottomleft:10px;
+	-moz-border-radius-bottomright:10px;
 	clear:both;
-	margin:0;
+	margin:0 10px;
 	overflow:hidden;
 }
 #next-prev-top span {
@@ -164,22 +179,28 @@ ul.table li.disclosure a span.date {
 }
 #next-prev-top .next a,
 #next-prev-top .prev a {
-	border:15px solid #eee;
+	border:15px solid #fff;
 	display:block;
 	height:1.5em;
 	overflow:hidden;
 	text-decoration:none;
 }
 #next-prev-top .next a {
-	background:#eee url(../images/disclosure-left.png) no-repeat left center;
+	background: url(../images/disclosure-left.png) no-repeat left center;
+	border-bottom-left-radius:10px;
+	-webkit-border-bottom-left-radius:10px;
+	-moz-border-radius-bottomleft:10px;
 	border-left:0;
 	border-right:1px solid #ddd;
 	padding-left:40px;
 }
 #next-prev-top .prev a {
-	background:#eee url(../images/disclosure.png) no-repeat right center;
+	background: url(../images/disclosure.png) no-repeat right center;
 	border-left:1px solid #fff;
 	border-right:0;
+	border-bottom-right-radius:10px;
+	-webkit-border-bottom-right-radius:10px;
+	-moz-border-radius-bottomright:10px;
 	padding-right:40px;
 	text-align:right;
 }
@@ -187,14 +208,14 @@ ul.table li.disclosure a span.date {
 #next-prev-bottom,
 #navigation-bottom {display:none;}
 
-#content {margin:10px;}
-
+.tabbed.group {
+	padding:0;
+}
 .tabbed ul.tabs{
 	background:url(../images/title-divider.png) repeat-x bottom;
-	border-bottom:5px solid #eee;
-	clear:both;
+	border-bottom:1px solid #ccc;
 	list-style:none;
-	margin:10px 0 0;
+	margin: 0;
 	overflow:hidden;
 }
 .tabbed .tabs li {
@@ -202,32 +223,26 @@ ul.table li.disclosure a span.date {
 	margin-bottom: 0;
 	width:50%;
 }
+.tabbed .tabs li a{
+	background:#d5d5d5 url(../images/tab.gif) repeat-x bottom;
+	color:#333;
+	display:block;
+	padding:15px;
+	text-decoration:none;
+}
 .tabbed .tabs li:first-child a {
-	-moz-border-radius-topright:5px;
-	-webkit-border-top-right-radius:5px;
-	border-top-right-radius:5px;
-	margin-right:2px;
+	border-top-left-radius:10px;
+	-webkit-border-top-left-radius:10px;
+	-moz-border-radius-topleft:10px;
 }
 .tabbed .tabs li:last-child a {
-	-moz-border-radius-topleft:5px;
-	-webkit-border-top-left-radius:5px;
-	border-top-left-radius:5px;
-	margin-left:2px;
-}
-.tabbed .tabs li a{
-	background:#ddd url(../images/tab.gif) repeat-x bottom;
-	border:1px solid #c5c5c5;
-	border-width:1px 1px 0;
-	display:block;
-	font-weight:bold;
-	padding:10px;
-	text-decoration:none;
+	border-top-right-radius:10px;
+	-webkit-border-top-right-radius:10px;
+	-moz-border-radius-topright:10px;
 }
 .tabbed .tabs li.active a {
 	background-color:#fff;
 	background-image:url(../images/tab-active.gif);
-	border-color:#ddd;
-	color:#777;
 }
 .tabbed h2 {
 	display:none;
@@ -239,6 +254,7 @@ ul.table li.disclosure a span.date {
 	background:url(../images/comment.png) no-repeat 10px 10px;
 	border-bottom:1px solid #ddd;
 	font-size:11px;
+	margin:0;
 	padding:10px 10px 10px 30px;
 }
 .commentlist li:last-child {border:0;}

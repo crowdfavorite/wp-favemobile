@@ -21,7 +21,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 $about_text = cfct_about_text();
 if (!empty($about_text)) {
 ?>
-<div id="about">
+<div id="about" class="content">
 <?php
 	echo $about_text;
 ?>

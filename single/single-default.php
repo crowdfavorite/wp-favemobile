@@ -23,7 +23,7 @@ get_header();
 ?>
 <p id="next-prev-top"><?php cfct_misc('nav-single'); ?></p>
 
-<div id="content">
+<div id="content" class="group">
 <?php
 
 cfct_loop();
