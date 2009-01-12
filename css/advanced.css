@@ -227,7 +227,7 @@ ul.table li.disclosure a span.date {
 	background:#d5d5d5 url(../images/tab.gif) repeat-x bottom;
 	color:#333;
 	display:block;
-	padding:15px;
+	padding: 8px 15px;
 	text-decoration:none;
 }
 .tabbed .tabs li:first-child a {
