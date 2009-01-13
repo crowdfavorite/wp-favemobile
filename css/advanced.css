@@ -45,6 +45,10 @@ p, li {
 .hide {
 	display: none;
 }
+.clear {
+	clear: both;
+	float: none;
+}
 .table-title,
 .content {
 	color:#777;
@@ -64,7 +68,7 @@ p, li {
 	-webkit-border-radius:10px;
 	overflow:hidden;
 	margin:10px;
-	padding:10px;
+	padding:10px 15px;
 }
 ul.table.group {
 	margin:10px;
@@ -227,7 +231,7 @@ ul.table li.disclosure a span.date {
 	background:#d5d5d5 url(../images/tab.gif) repeat-x bottom;
 	color:#333;
 	display:block;
-	padding: 8px 15px;
+	padding: 8px 15px 7px;
 	text-decoration:none;
 }
 .tabbed .tabs li:first-child a {
@@ -281,3 +285,15 @@ ul.table li.disclosure a span.date {
 	padding:10px;
 }
 #footer a {color:#ddd;}
+#footer p#developer-link {
+	display:block;
+	text-indent:-32697px;
+}
+#footer p#developer-link a,
+#footer p#developer-link a:visited {
+	background:url(../images/by-crowd-favorite.png) no-repeat left top;
+	float:right;
+	height:30px;
+	text-indent:-32697px;
+	width:250px;
+}
