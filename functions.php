@@ -41,6 +41,6 @@ add_action('init', 'cfct_blog_init');
 wp_enqueue_script('jquery');
 wp_enqueue_script('carrington-mobile', get_bloginfo('template_directory').'/js/mobile.js', 'jquery', '1.0');
 
-include_once(CFCT_PATH.'functions/carrington.php');
+include_once(CFCT_PATH.'carrington-core/carrington.php');
 
 ?>
