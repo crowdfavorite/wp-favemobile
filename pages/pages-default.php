@@ -26,7 +26,7 @@ get_header();
 
 ?>
 
-<div id="content">
+<div id="content" class="group">
 <?php
 
 cfct_loop();

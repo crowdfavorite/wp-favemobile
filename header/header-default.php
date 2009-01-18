@@ -31,7 +31,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 </head>
 <body<?php if(is_single() || is_page()) {echo '';} else { echo ' id="is-list"';} ?>>
 
-<h3 id="site-name"><?php bloginfo('name'); ?></h3>
+<h3 id="site-name"><a rel="home" href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h3>
 
 <hr />
 

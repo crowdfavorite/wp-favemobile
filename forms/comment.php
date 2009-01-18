@@ -44,11 +44,11 @@ if ('open' == $post->comment_status) {
 			} else { 
 	?>
 		<p>
-			<input type="text" name="author" id="author" value="<?php echo $comment_author; ?>" size="22" tabindex="2" />
+			<input type="text" name="author" id="author" value="<?php echo $comment_author; ?>" size="22" />
 			<label for="author"><small><?php _e('Name', 'carrington-mobile'); if ($req) { _e(' (required)', 'carrington-mobile'); } ?></small></label>
 		</p>
 		<p>
-			<input type="text" name="email" id="email" value="<?php echo $comment_author_email; ?>" size="22" tabindex="3" />
+			<input type="text" name="email" id="email" value="<?php echo $comment_author_email; ?>" size="22" />
 			<label for="email"><small><?php _e('Email', 'carrington-mobile');
 			if ($req) {
 				_e(' (required, but never shared)', 'carrington-mobile');
@@ -58,13 +58,13 @@ if ('open' == $post->comment_status) {
 			} ?></small></label>
 		</p>
 		<p>
-			<input type="text" name="url" id="url" value="<?php echo $comment_author_url; ?>" size="22" tabindex="4" />
+			<input type="text" name="url" id="url" value="<?php echo $comment_author_url; ?>" size="22" />
 			<label title="<?php _e('Your website address', 'carrington-mobile'); ?>" for="url"><small><?php _e('Web', 'carrington-mobile'); ?></small></label>	
 		</p>
 	<?php 
 			} 
 	?>
-	<p><textarea name="comment" id="comment" rows="8" cols="40" tabindex="1"></textarea></p>
+	<p><textarea name="comment" id="comment" rows="8" cols="40"></textarea></p>
 	<p>
 		<input name="submit" type="submit" id="submit" value="<?php _e('Submit comment', 'carrington-mobile'); ?>" tabindex="5" />
 		<input type="hidden" name="comment_post_ID" value="<?php echo $post->ID; ?>" />

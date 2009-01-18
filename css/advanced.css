@@ -110,11 +110,11 @@ ul.table li.disclosure a span.date {
 	color:#999;
 	font-size:10px;
 	font-weight:normal;
-	margin:0 -10px;
+	margin:0 -15px 10px -15px;
 }
 .title-divider span {
 	background:#fff;
-	margin-left:10px;
+	margin:0 0 0 10px;
 	padding: 0 5px;
 }
 
@@ -129,30 +129,18 @@ ul.table li.disclosure a span.date {
 
 #site-name {
 	background:#666 url(../images/header-gloss.png) repeat-x bottom;
-	color:#fff;
-	font-size:16px;
 	margin:0;
-	text-decoration:underline;
+}
+#site-name a {
+	background:url(../images/home.png) no-repeat 10px center;
+	color:#fff;
+	display:block;
+	font-size:16px;
 	padding:1em 40px;
 }
-
 #navigation-top {
-	font-size:16px;
-	position:absolute;
-	top:0;
-	height:3.5em;
-	width:100%;
-	text-indent:-3200px;
+	display:none;
 }
-#navigation-top a.to-home {
-	background:url(../images/home.png) no-repeat 10px center;
-	display:block;
-	height:100%;
-	position:absolute;
-	top:0;
-	width:100%;
-}
-
 #next-prev-top {
 	background:#fff;
 	border:1px solid #ccc;
@@ -276,7 +264,7 @@ ul.table li.disclosure a span.date {
 #respond label {display:block;}
 #respond textarea,
 #respond input[type=text] {
-	width:285px;
+	width:95%;
 }
 
 #footer {
