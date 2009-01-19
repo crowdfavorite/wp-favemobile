@@ -39,7 +39,7 @@ if ('open' == $post->comment_status) {
 	<?php // if you're logged in...
 			if ($user_ID) {
 	?>
-		<p><?php printf(__('Logged in as <a href="%s">%s</a>.', 'carrington-mobile'), get_bloginfo('wpurl').'/wp-admin/profile.php', $user_identity); ?> <a href="<?php bloginfo('wpurl'); ?>/wp-login.php?action=logout" title="<?php _e('Log out of this account', 'carrington-mobile'); ?>"><?php _e('Logout &rarr;', 'carrington-mobile'); ?></a></p>
+		<p><?php printf(__('Logged in as <a href="%s">%s</a>. ', 'carrington-mobile'), get_bloginfo('wpurl').'/wp-admin/profile.php', $user_identity); wp_loginout() ?></p>
 	<?php
 			} else { 
 	?>
