@@ -21,7 +21,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 get_header();
 
 ?>
-<p id="next-prev-top"><?php cfct_misc('nav-single'); ?></p>
+<p id="next-prev-top" class="pagination"><?php cfct_misc('nav-single'); ?></p>
 
 <div id="content" class="group">
 <?php
@@ -33,7 +33,7 @@ comments_template();
 ?>
 </div><!--#content-->
 
-<p id="next-prev-bottom"><?php cfct_misc('nav-single'); ?></p>
+<p id="next-prev-bottom" class="pagination"><?php cfct_misc('nav-single'); ?></p>
 
 <?php 
 

@@ -18,20 +18,19 @@
 if (__FILE__ == $_SERVER['SCRIPT_FILENAME']) { die(); }
 if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
-if (have_posts()) {
-	echo '<ul class="disclosure table group">';
-	while (have_posts()) {
-		the_post();
+get_header();
+
 ?>
-	<li>
+
+<div id="content">
+	<h1 class="table-title"><?php wp_title('&laquo;', true, 'right'); bloginfo('name'); ?></h1>
 <?php
-		cfct_excerpt();
+	cfct_loop();
 ?>
-	</li>
+</div><!--#content-->
+
 <?php
-	}
-	echo '<li class="pagination">', cfct_misc('nav-list'),'</li>';
-	echo '</ul>';
-}
+
+get_footer();
 
 ?>
