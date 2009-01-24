@@ -48,22 +48,6 @@ if (cfct_get_option('cfct_credit') == 'yes') {
 ?>
 	<div class="clear"></div>
 </div>
-<script type="text/javascript">
-	document.write('<?php
-
-ob_start();
-wp_print_scripts();
-$scripts = ob_get_contents();
-ob_end_clean();
-
-echo trim(str_replace(
-	array("'", "\n", '/'), 
-	array("\'", '', '\/'),
-	$scripts
-));
-
-?>');
-</script>
 <?php
 
 wp_footer();

@@ -28,6 +28,22 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 	<meta http-equiv="content-type" content="<?php bloginfo('html_type') ?>; charset=<?php bloginfo('charset') ?>" />
 	<meta id="viewport" name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
 	<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" media="screen" charset="utf-8" />
+<script type="text/javascript">
+	document.write('<?php
+
+ob_start();
+wp_print_scripts();
+$scripts = ob_get_contents();
+ob_end_clean();
+
+echo trim(str_replace(
+	array("'", "\n", '/'), 
+	array("\'", '', '\/'),
+	$scripts
+));
+
+?>');
+</script>
 </head>
 <body<?php if(is_single() || is_page()) {echo '';} else { echo ' id="is-list"';} ?>>
 
