@@ -18,26 +18,13 @@
 if (__FILE__ == $_SERVER['SCRIPT_FILENAME']) { die(); }
 if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
-cfct_form('search');
-
 ?>
-<hr />
-
-	<h2 id="pages" class="table-title"><?php _e('Pages'); ?></h2>
-	<ul class="disclosure table group">
-		<?php wp_list_pages('title_li=&depth=1&child_of='.$parent); ?>
-	</ul>
 
 <hr />
 
-<p id="navigation-bottom" class="navigation">
-	<?php cfct_misc('main-nav'); ?>
-</p>
-
-<hr />
-
-<?php
-
-cfct_template_file('footer', 'bottom');
-
-?>
+<div class="group">
+	<form id="search" action="<?php bloginfo('home'); ?>" method="get">
+		<input type="text" name="s" id="s" value="" />
+		<input type="submit" name="submit_button" value="Search" />
+	</form>
+</div>

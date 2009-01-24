@@ -201,6 +201,13 @@ ul.table li.disclosure a span.date {
 #next-prev-bottom,
 #navigation-bottom {display:none;}
 
+#search input {
+	padding: 3px;
+}
+#s {
+	width: 50%;
+}
+
 .tabbed.group {
 	padding:0;
 }
