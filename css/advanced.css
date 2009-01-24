@@ -203,6 +203,9 @@ ul.table li.disclosure a span.date {
 #next-prev-bottom,
 #navigation-bottom {display:none;}
 
+#search {
+	margin: 0;
+}
 #search input {
 	padding: 3px;
 }

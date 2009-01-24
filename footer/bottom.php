@@ -31,13 +31,23 @@ if (!empty($about_text)) {
 }
 ?>
 <div id="footer">
-	<p><a href="<?php bloginfo('wpurl'); ?>/wp-admin/options-general.php?ak_action=reject_mobile">Exit the Mobile Edition</a> <span class="small">(view the standard browser version)</span>.</p>
+<?php
+if (function_exists('cfmobi_mobile_exit')) {
+	cfmobi_mobile_exit();
+}
+?>
 
 	<hr />
 
 	<p class="small">
 		Proudly powered by <a href="http://wordpress.org"><strong>WordPress</strong></a> and <a href="http://carringtontheme.com"><strong>Carrington</strong></a>.<br />
-		<a href="http://alexking.org/projects/wordpress">WordPress Mobile Edition</a> available at alexking.org.
+<?php
+if (function_exists('cfmobi_mobile_exit')) {
+?>
+		<a href="http://crowdfavorite.com/wordpress/plugins/mobile">WordPress Mobile Edition</a> available from Crowd Favorite.
+<?php
+}
+?>
 	</p>
 <?php
 if (cfct_get_option('cfct_credit') == 'yes') {
