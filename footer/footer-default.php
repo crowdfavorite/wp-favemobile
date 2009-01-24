@@ -33,7 +33,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 			<?php wp_get_archives('type=postbypost&limit=10'); ?>
 		</ul>
 	</div>
-	<div class="hide" id="pages_tab">
+	<div id="pages_tab">
 		<hr />
 		<h2 id="pages"><?php _e('Pages'); ?></h2>
 		<ul class="disclosure table">

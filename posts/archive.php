@@ -23,7 +23,7 @@ get_header();
 ?>
 
 <div id="content">
-	<h1 class="table-title"><?php wp_title('&laquo;', true, 'right'); bloginfo('name'); ?></h1>
+	<h1 class="table-title"><?php wp_title('', true, 'right'); ?></h1>
 <?php
 	cfct_loop();
 ?>

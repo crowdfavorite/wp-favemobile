@@ -13,24 +13,25 @@
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
 // **********************************************************************
 
-jQuery(function() {
-	jQuery('link[rel=stylesheet]').each(function() {
-		var base = jQuery(this).attr('href').replace('style.css', '');
-		jQuery('head').append('<link rel="stylesheet" href="' + base + 'css/advanced.css" type="text/css" media="screen" charset="utf-8" />');
+jQuery(function($) {
+	$('link[rel=stylesheet]').each(function() {
+		var base = $(this).attr('href').replace('style.css', '');
+		$('head').append('<link rel="stylesheet" href="' + base + 'css/advanced.css" type="text/css" media="screen" charset="utf-8" />');
 		return false;
 	});
-	jQuery('ul.tabs a[href=#recent]').click(function() {
-		jQuery('ul.tabs li').removeClass('active');
-		jQuery(this).parent().addClass('active');
-		jQuery('#pages_tab').hide();
-		jQuery('#recent_tab').show();
+	$('ul.tabs a[href=#recent]').click(function() {
+		$('ul.tabs li').removeClass('active');
+		$(this).parent().addClass('active');
+		$('#pages_tab').hide();
+		$('#recent_tab').show();
 		return false;
 	});
-	jQuery('ul.tabs a[href=#pages]').click(function() {
-		jQuery('ul.tabs li').removeClass('active');
-		jQuery(this).parent().addClass('active');
-		jQuery('#recent_tab').hide();
-		jQuery('#pages_tab').show();
+	$('ul.tabs a[href=#pages]').click(function() {
+		$('ul.tabs li').removeClass('active');
+		$(this).parent().addClass('active');
+		$('#recent_tab').hide();
+		$('#pages_tab').show();
 		return false;
 	});
+	$('#pages_tab').hide();
 });
