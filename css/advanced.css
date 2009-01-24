@@ -129,7 +129,8 @@ ul.table li.disclosure a span.date {
 }
 
 #site-name {
-	background:#666 url(../images/header-gloss.png) repeat-x bottom;
+	background:#666 url(../images/header-gloss.png) repeat-x center;
+	border-bottom: 1px solid #999;
 	margin:0;
 }
 #site-name a {
