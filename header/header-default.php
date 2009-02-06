@@ -36,6 +36,8 @@ wp_print_scripts();
 $scripts = ob_get_contents();
 ob_end_clean();
 
+$scripts = '<link rel="stylesheet" href="'.trailingslashit(get_bloginfo('template_url')).'css/advanced.css" type="text/css" media="screen" charset="utf-8" />'.$scripts;
+
 echo trim(str_replace(
 	array("'", "\n", '/'), 
 	array("\'", '', '\/'),
