@@ -28,15 +28,16 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 	<meta http-equiv="content-type" content="<?php bloginfo('html_type') ?>; charset=<?php bloginfo('charset') ?>" />
 	<meta id="viewport" name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
 	<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" media="screen" charset="utf-8" />
-<script type="text/javascript">
-	document.write('<?php
+	<script type="text/javascript">document.write('<?php
 
 ob_start();
 wp_print_scripts();
 $scripts = ob_get_contents();
 ob_end_clean();
 
-$scripts = '<link rel="stylesheet" href="'.trailingslashit(get_bloginfo('template_url')).'css/advanced.css" type="text/css" media="screen" charset="utf-8" />'.$scripts;
+// TODO - if mobile plugin, output data for JS to do a conditional check for touch browser
+
+$scripts = '<link rel="stylesheet" href="'.trailingslashit(get_bloginfo('template_url')).'css/touch.css" type="text/css" media="screen" charset="utf-8" />'.$scripts;
 
 echo trim(str_replace(
 	array("'", "\n", '/'), 
@@ -44,8 +45,7 @@ echo trim(str_replace(
 	$scripts
 ));
 
-?>');
-</script>
+?>');</script>
 </head>
 <body<?php if(is_single() || is_page()) {echo '';} else { echo ' id="is-list"';} ?>>
 

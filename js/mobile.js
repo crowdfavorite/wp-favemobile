@@ -14,11 +14,6 @@
 // **********************************************************************
 
 jQuery(function($) {
-// 	$('link[rel=stylesheet]').each(function() {
-// 		var base = $(this).attr('href').replace('style.css', '');
-// 		$('head').append('<link rel="stylesheet" href="' + base + 'css/advanced.css" type="text/css" media="screen" charset="utf-8" />');
-// 		return false;
-// 	});
 	$('ul.tabs a[href=#recent]').click(function() {
 		$('ul.tabs li').removeClass('active');
 		$(this).parent().addClass('active');
