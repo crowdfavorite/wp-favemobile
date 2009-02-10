@@ -37,7 +37,7 @@ ob_end_clean();
 
 // TODO - if mobile plugin, output data for JS to do a conditional check for touch browser
 
-$scripts = '<link rel="stylesheet" href="'.trailingslashit(get_bloginfo('template_url')).'css/touch.css" type="text/css" media="screen" charset="utf-8" />'.$scripts;
+$scripts = '<link rel="stylesheet" href="'.trailingslashit(get_bloginfo('template_url')).'css/advanced.css" type="text/css" media="screen" charset="utf-8" />'.$scripts;
 
 echo trim(str_replace(
 	array("'", "\n", '/'), 

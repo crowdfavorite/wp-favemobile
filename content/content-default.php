@@ -21,8 +21,13 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 ?>
 <h1><?php the_title(); ?></h1>
 
-<p class="categories small"><?php _e('Posted in: '); the_category(', '); ?></p>
-
 <?php
 the_content();
 ?>
+
+<div class="clear"></div>
+
+<?php the_date('', '<p class="date small">Posted on: ','</p>'); ?>
+
+<?php the_tags('<p class="tags small">Tags: ',', ','</p>'); ?>
+<p class="categories small"><?php _e('Posted in: '); the_category(', '); ?></p>
