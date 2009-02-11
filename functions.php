@@ -38,6 +38,20 @@ function cfct_blog_init() {
 }
 add_action('init', 'cfct_blog_init');
 
+function cfct_archive_title() {
+	if(is_author()) {
+		$output = __('Posts by:');
+	} elseif(is_category()) {
+		$output = __('Category Archives:');
+	} elseif(is_tag()) {
+		$output = __('Tag Archives:');
+	} elseif(is_archive()) {
+		$output = __('Archives:');
+	}
+	$output .= ' ';
+	echo $output;
+}
+
 wp_enqueue_script('jquery');
 wp_enqueue_script('carrington-mobile', get_bloginfo('template_directory').'/js/mobile.js', 'jquery', '1.0');
 
