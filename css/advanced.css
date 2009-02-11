@@ -224,9 +224,6 @@ ul.table.disclosure .pagination .prev a {
 	background-color:#fff;
 	background-image:url(../images/tab-active.gif);
 }
-.tabbed h2 {
-	display:none;
-}
 .commentlist {
 	margin:0 -10px;
 }

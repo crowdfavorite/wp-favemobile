@@ -23,22 +23,22 @@ cfct_form('search');
 ?>
 <hr />
 
-<div class="tabbed group">
-	<ul class="tabs">
+<div class="tabbed">
+	<ul class="tabs hide">
 		<li class="active"><a href="#recent">Recent Posts</a></li>
 		<li><a href="#pages">Pages</a></li>
 	</ul>
 	<div id="recent_tab">
 		<hr />
-		<h2 id="recent"><?php _e('Recent Posts'); ?></h2>
-		<ul class="disclosure table">
+		<h2 class="table-title" id="recent"><?php _e('Recent Posts'); ?></h2>
+		<ul class="disclosure table group">
 			<?php wp_get_archives('type=postbypost&limit=10'); ?>
 		</ul>
 	</div>
 	<div id="pages_tab">
 		<hr />
-		<h2 id="pages"><?php _e('Pages'); ?></h2>
-		<ul class="disclosure table">
+		<h2 class="table-title" id="pages"><?php _e('Pages'); ?></h2>
+		<ul class="disclosure table group">
 			<?php wp_list_pages('title_li=&depth=1&child_of='.$parent); ?>
 		</ul>
 	</div>
