@@ -24,7 +24,9 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 <div class="group">
 	<form id="search" action="<?php bloginfo('home'); ?>" method="get">
-		<input type="text" name="s" id="s" value="" />
-		<input type="submit" name="submit_button" value="Search" />
+		<div>
+			<input type="text" name="s" id="s" inputmode="predictOn" value="" />
+			<input type="submit" name="submit_button" value="Search" />
+		</div>
 	</form>
 </div>

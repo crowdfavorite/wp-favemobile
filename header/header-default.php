@@ -19,17 +19,17 @@ if (__FILE__ == $_SERVER['SCRIPT_FILENAME']) { die(); }
 if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML Basic 1.1//EN"
+    "http://www.w3.org/TR/xhtml-basic/xhtml-basic11.dtd">
 
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<title><?php wp_title('&laquo;', true, 'right'); bloginfo('name'); ?></title>
 	<meta http-equiv="content-type" content="<?php bloginfo('html_type') ?>; charset=<?php bloginfo('charset') ?>" />
-	<meta id="viewport" name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
+	<meta name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
 	<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" media="screen" charset="utf-8" />
-	<style type="text/css" charset="utf-8">
-	@import url(<?php echo trailingslashit(get_bloginfo('template_url')).'css/advanced.css'; ?>);
+	<style type="text/css">
+		@import url(<?php echo trailingslashit(get_bloginfo('template_url')).'css/advanced.css'; ?>);
 	</style>
 	<script type="text/javascript">
 	<!--
