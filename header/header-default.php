@@ -31,27 +31,48 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 	<style type="text/css" charset="utf-8">
 	@import url(<?php echo trailingslashit(get_bloginfo('template_url')).'css/advanced.css'; ?>);
 	</style>
-	<script type="text/javascript">document.write('<?php
-
-ob_start();
-wp_print_scripts();
-$scripts = ob_get_contents();
-ob_end_clean();
+	<script type="text/javascript">
+	<!--
+<?php
 
 if (function_exists('cfmobi_check_mobile')) {
 // TODO - if mobile plugin, output data for JS to do a conditional check for touch browser
 	global $cfmobi_touch_browsers;
+	if (count($cfmobi_touch_browsers)) {
+		$touch = array();
+		foreach ($cfmobi_touch_browsers as $browser) {
+			$touch[] = str_replace('"', '\"', trim($browser));
+		}
+
+?>
+	var CFMOBI_TOUCH = ["<?php echo implode('","', $touch); ?>"];
+	for (var i = 0; i < CFMOBI_TOUCH.length; i++) {
+		if (navigator.userAgent.indexOf(CFMOBI_TOUCH[i]) != -1) {
+			document.write('<?php echo str_replace('/', '\/', '<link rel="stylesheet" href="'.trailingslashit(get_bloginfo('template_url')).'css/touch.css" type="text/css" media="screen" charset="utf-8" />'); ?>');
+			break;
+		}
+	}
+<?php
+
+	}
 }
 
-$scripts = '<link rel="stylesheet" href="'.trailingslashit(get_bloginfo('template_url')).'css/touch.css" type="text/css" media="screen" charset="utf-8" />'.$scripts;
+?> 
+	document.write('<?php
+
+ob_start();
+wp_print_scripts();
+$wp_scripts = ob_get_contents();
+ob_end_clean();
 
 echo trim(str_replace(
 	array("'", "\n", '/'), 
 	array("\'", '', '\/'),
-	$scripts
+	$wp_scripts
 ));
 
-?>');</script>
+?>');
+	//--></script>
 </head>
 <body<?php if(is_single() || is_page()) {echo '';} else { echo ' id="is-list"';} ?>>
 
