@@ -203,7 +203,6 @@ ul.table.disclosure .pagination .prev a {
 }
 .tabbed ul.tabs{
 	background:url(../images/title-divider.png) repeat-x bottom;
-	border-bottom:1px solid #ccc;
 	list-style:none;
 	margin: 0 10px;
 	overflow:hidden;
@@ -305,13 +304,16 @@ ul.table.disclosure .pagination .prev a {
 	-moz-border-radius-bottomleft:10px;
 	-moz-border-radius-bottomright:10px;
 }
-
 .tabbed .tabs li:first-child a {
+	border: 1px solid #ccc;
+	border-width: 1px 1px 0;
 	border-top-left-radius:10px;
 	-webkit-border-top-left-radius:10px;
 	-moz-border-radius-topleft:10px;
 }
 .tabbed .tabs li:last-child a {
+	border: 1px solid #ccc;
+	border-width: 1px 1px 0 0;
 	border-top-right-radius:10px;
 	-webkit-border-top-right-radius:10px;
 	-moz-border-radius-topright:10px;
