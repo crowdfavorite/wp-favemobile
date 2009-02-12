@@ -224,10 +224,6 @@ ul.table.disclosure .pagination .prev a {
 	background-color:#fff;
 	background-image:url(../images/tab-active.gif);
 }
-.tabbed ul.table.group {
-	border-top: 0;
-	margin-top: 0;
-}
 .commentlist {
 	margin:0 -10px;
 }

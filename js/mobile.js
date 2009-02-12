@@ -33,5 +33,9 @@ jQuery(function($) {
 			return false;
 		});
 		$('#pages_tab').hide();
+		$('.tabbed ul.group').css({
+			'border-top': '0',
+			'margin-top': '0'
+		});
 	}
 });
