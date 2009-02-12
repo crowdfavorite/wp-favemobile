@@ -264,11 +264,11 @@ ul.table.disclosure .pagination .prev a {
 }
 #footer p#developer-link a,
 #footer p#developer-link a:visited {
-	background:url(../images/by-crowd-favorite.png) no-repeat left top;
+	background:url(../images/by-crowd-favorite.gif) no-repeat left top;
 	float:right;
 	height:30px;
 	text-indent:-32697px;
-	width:250px;
+	width:200px;
 }
 /* rounded goodness */
 .group {

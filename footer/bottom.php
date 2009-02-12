@@ -44,7 +44,7 @@ if (function_exists('cfmobi_mobile_exit')) {
 <?php
 if (function_exists('cfmobi_mobile_exit')) {
 ?>
-		<a href="http://crowdfavorite.com/wordpress/plugins/mobile">WordPress Mobile Edition</a> available from Crowd Favorite.
+		<a href="http://crowdfavorite.com/wordpress">WordPress Mobile Edition</a> available from Crowd Favorite.
 <?php
 }
 ?>
