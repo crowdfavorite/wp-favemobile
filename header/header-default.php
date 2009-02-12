@@ -36,7 +36,6 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 <?php
 
 if (function_exists('cfmobi_check_mobile')) {
-// TODO - if mobile plugin, output data for JS to do a conditional check for touch browser
 	global $cfmobi_touch_browsers;
 	if (count($cfmobi_touch_browsers)) {
 		$touch = array();
