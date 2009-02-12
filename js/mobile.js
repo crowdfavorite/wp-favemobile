@@ -14,19 +14,24 @@
 // **********************************************************************
 
 jQuery(function($) {
-	$('ul.tabs a[href=#recent]').click(function() {
-		$('ul.tabs li').removeClass('active');
-		$(this).parent().addClass('active');
+	var tabs = $('ul.tabs');
+	if (tabs.size()) {
+		tabs.removeClass('hide');
+		$('#recent, #pages').hide();
+		$('ul.tabs a[href=#recent]').click(function() {
+			$('ul.tabs li').removeClass('active');
+			$(this).parent().addClass('active');
+			$('#pages_tab').hide();
+			$('#recent_tab').show();
+			return false;
+		});
+		$('ul.tabs a[href=#pages]').click(function() {
+			$('ul.tabs li').removeClass('active');
+			$(this).parent().addClass('active');
+			$('#recent_tab').hide();
+			$('#pages_tab').show();
+			return false;
+		});
 		$('#pages_tab').hide();
-		$('#recent_tab').show();
-		return false;
-	});
-	$('ul.tabs a[href=#pages]').click(function() {
-		$('ul.tabs li').removeClass('active');
-		$(this).parent().addClass('active');
-		$('#recent_tab').hide();
-		$('#pages_tab').show();
-		return false;
-	});
-	$('#pages_tab').hide();
+	}
 });

@@ -38,7 +38,10 @@ wp_print_scripts();
 $scripts = ob_get_contents();
 ob_end_clean();
 
+if (function_exists('cfmobi_check_mobile')) {
 // TODO - if mobile plugin, output data for JS to do a conditional check for touch browser
+	global $cfmobi_touch_browsers;
+}
 
 $scripts = '<link rel="stylesheet" href="'.trailingslashit(get_bloginfo('template_url')).'css/touch.css" type="text/css" media="screen" charset="utf-8" />'.$scripts;
 

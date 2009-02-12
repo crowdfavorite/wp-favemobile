@@ -205,7 +205,7 @@ ul.table.disclosure .pagination .prev a {
 	background:url(../images/title-divider.png) repeat-x bottom;
 	border-bottom:1px solid #ccc;
 	list-style:none;
-	margin: 0;
+	margin: 0 10px;
 	overflow:hidden;
 }
 .tabbed .tabs li {
@@ -223,6 +223,10 @@ ul.table.disclosure .pagination .prev a {
 .tabbed .tabs li.active a {
 	background-color:#fff;
 	background-image:url(../images/tab-active.gif);
+}
+.tabbed ul.table.group {
+	border-top: 0;
+	margin-top: 0;
 }
 .commentlist {
 	margin:0 -10px;

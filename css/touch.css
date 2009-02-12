@@ -8,6 +8,14 @@ body {
 	-webkit-border-radius:10px;
 	padding:10px 15px;
 }
+.tabbed ul.table.group {
+	border-top-right-radius: 0;
+	-moz-border-radius-topright: 0;
+	-webkit-border-top-right-radius: 0;
+	border-top-left-radius: 0;
+	-moz-border-radius-topleft: 0;
+	-webkit-border-top-left-radius: 0;
+}
 
 ul.table.disclosure a,
 ul.table li.disclosure a {
