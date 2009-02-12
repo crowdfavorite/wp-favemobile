@@ -1,71 +1,24 @@
 body {
 	-webkit-text-size-adjust: none;
 }
-
 .group {
-	border-radius:10px;
-	-moz-border-radius:10px;
-	-webkit-border-radius:10px;
 	padding:10px 15px;
 }
-.tabbed ul.table.group {
-	border-top-right-radius: 0;
-	-moz-border-radius-topright: 0;
-	-webkit-border-top-right-radius: 0;
-	border-top-left-radius: 0;
-	-moz-border-radius-topleft: 0;
-	-webkit-border-top-left-radius: 0;
-}
-
 ul.table.disclosure a,
 ul.table li.disclosure a {
 	background:url(../images/disclosure.png) no-repeat right center;
 	padding:15px;
 }
-
 .table-title {
 	margin-left:25px;
 	margin-right:25px;
 }
-
 #site-name a {
 	padding-bottom:16px;
 	padding-top:16px;
-}
-
-.pagination .next a,
-ul.table.disclosure .pagination .next a {
-	border-bottom-left-radius:10px;
-	-webkit-border-bottom-left-radius:10px;
-	-moz-border-radius-bottomleft:10px;
-}
-.pagination .prev a,
-ul.table.disclosure .pagination .prev a {
-	border-bottom-right-radius:10px;
-	-webkit-border-bottom-right-radius:10px;
-	-moz-border-radius-bottomright:10px;
-}
-.pagination {
-	border-bottom-left-radius:10px;
-	border-bottom-right-radius:10px;
-	-webkit-border-bottom-left-radius:10px;
-	-webkit-border-bottom-right-radius:10px;
-	-moz-border-radius-bottomleft:10px;
-	-moz-border-radius-bottomright:10px;
 }
 .pagination .next a,
 .pagination .prev a {
 	border-bottom-width:15px;
 	border-top-width:15px;
-}
-
-.tabbed .tabs li:first-child a {
-	border-top-left-radius:10px;
-	-webkit-border-top-left-radius:10px;
-	-moz-border-radius-topleft:10px;
-}
-.tabbed .tabs li:last-child a {
-	border-top-right-radius:10px;
-	-webkit-border-top-right-radius:10px;
-	-moz-border-radius-topright:10px;
 }
