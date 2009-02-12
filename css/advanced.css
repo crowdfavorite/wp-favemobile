@@ -130,7 +130,7 @@ ul.table li.disclosure a span.date {
 	margin:0;
 }
 #site-name a {
-	background: #666 url(../images/home.png) no-repeat 10px center;
+	background: transparent url(../images/home.png) no-repeat 10px center;
 	color:#fff;
 	display:block;
 	font-size:16px;
