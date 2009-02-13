@@ -101,6 +101,13 @@ ul.table li.disclosure a span.date {
 	font-size: 11px;
 	white-space: nowrap;
 }
+ul.table li span.title {
+	background: #888;
+	color: #fff;
+	display: block;
+	font-size: 10px;
+	padding: 3px 8px;
+}
 .title-divider {
 	background:url(../images/title-divider.png) repeat-x center;
 	color:#999;

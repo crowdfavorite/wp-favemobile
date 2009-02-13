@@ -20,6 +20,18 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 cfct_form('search');
 
+global $post;
+is_page() ? $parent = $post->ID: $parent = 0;
+
+ob_start();
+wp_list_pages('title_li=&depth=1&child_of='.$parent);
+$sub_pages = ob_get_contents();
+ob_end_clean();
+
+if (!empty($sub_pages)) {
+	$sub_pages = '<li><span class="title">'.__('Sub Pages', 'carrington-mobile').'</span></li>'.$sub_pages.'<li><span class="title">'.__('Top Level Pages', 'carrington-mobile').'</span></li>';
+}
+
 ?>
 <hr />
 
@@ -39,7 +51,7 @@ cfct_form('search');
 		<hr />
 		<h2 class="table-title" id="pages"><?php _e('Pages'); ?></h2>
 		<ul class="disclosure table group">
-			<?php wp_list_pages('title_li=&depth=1&child_of='.$parent); ?>
+			<?php echo $sub_pages; wp_list_pages('title_li=&depth=1'); ?>
 		</ul>
 	</div>
 </div>
