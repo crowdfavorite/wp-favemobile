@@ -102,14 +102,14 @@ ul.table li.disclosure a .date {
 	white-space: nowrap;
 }
 ul.table li .title {
-	background: #bababa url(../images/title-dimple.gif) repeat-x top;
-	border-bottom:1px solid #999;
+	background: #a5a5a5 url(../images/title-dimple.gif) repeat-x top;
+	border-bottom:1px solid #777;
 	color: #fff;
 	display: block;
 	font-size: 10px;
-	font-weight:bold;
+	font-weight:normal;
 	padding: 3px 8px;
-	text-shadow: 0 1px 1px #111;
+	text-shadow: 0 1px 1px #555;
 }
 .title-divider {
 	background:url(../images/title-divider.png) repeat-x center;
