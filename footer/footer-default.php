@@ -20,16 +20,19 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 cfct_form('search');
 
-global $post;
-is_page() ? $parent = $post->ID: $parent = 0;
-
-ob_start();
-wp_list_pages('title_li=&depth=1&child_of='.$parent);
-$sub_pages = ob_get_contents();
-ob_end_clean();
+if (is_page()) {
+	global $post;
+	$parent = $post->ID;
+	ob_start();
+	wp_list_pages('title_li=&depth=1&child_of='.$parent);
+	$sub_pages = ob_get_contents();
+	ob_end_clean();
+} else {
+	$sub_pages = '';
+}
 
 if (!empty($sub_pages)) {
-	$sub_pages = '<li><span class="title">'.__('Sub Pages', 'carrington-mobile').'</span></li>'.$sub_pages.'<li><span class="title">'.__('Top Level Pages', 'carrington-mobile').'</span></li>';
+	$sub_pages = '<li><strong class="title">'.__('Sub Pages', 'carrington-mobile').'</strong></li>'.$sub_pages.'<li><strong class="title">'.__('Top Level Pages', 'carrington-mobile').'</strong></li>';
 }
 
 ?>
