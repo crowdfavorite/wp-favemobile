@@ -9,6 +9,10 @@ ul.table li.disclosure a {
 	background:url(../images/disclosure.png) no-repeat right center;
 	padding:15px;
 }
+ul.table li .title {
+	padding-left:15px;
+	padding-right:15px;
+}
 .table-title {
 	margin-left:25px;
 	margin-right:25px;
