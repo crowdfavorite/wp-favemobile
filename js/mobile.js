@@ -32,7 +32,12 @@ jQuery(function($) {
 			$('#pages_tab').show();
 			return false;
 		});
-		$('#pages_tab').hide();
+		if (CFMOBI_IS_PAGE) {
+			$('ul.tabs a[href=#pages]').click();
+		}
+		else {
+			$('ul.tabs a[href=#recent]').click();
+		}
 		$('.tabbed ul.group').css({
 			'border-top': '0',
 			'margin-top': '0'

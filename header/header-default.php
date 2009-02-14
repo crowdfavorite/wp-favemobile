@@ -35,6 +35,9 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 	<!--
 <?php
 
+is_page() ? $page = 'true' : $page = 'false';
+echo '	CFMOBI_IS_PAGE = '.$page.';';	
+
 if (function_exists('cfmobi_check_mobile')) {
 	global $cfmobi_touch_browsers;
 	if (count($cfmobi_touch_browsers)) {
