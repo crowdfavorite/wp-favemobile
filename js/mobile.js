@@ -14,6 +14,7 @@
 // **********************************************************************
 
 jQuery(function($) {
+	$('div.tabbed').prepend('<ul class="tabs hide"><li class="active"><a href="#recent">' + CFMOBI_POSTS_TAB + '</a></li><li><a href="#pages">' + CFMOBI_PAGES_TAB + '</a></li></ul>');
 	var tabs = $('ul.tabs');
 	if (tabs.size()) {
 		tabs.removeClass('hide');

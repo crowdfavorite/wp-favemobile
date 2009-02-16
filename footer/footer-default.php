@@ -39,10 +39,6 @@ if (!empty($sub_pages)) {
 <hr />
 
 <div class="tabbed">
-	<ul class="tabs hide">
-		<li class="active"><a href="#recent">Recent Posts</a></li>
-		<li><a href="#pages">Pages</a></li>
-	</ul>
 	<div id="recent_tab">
 		<hr />
 		<h2 class="table-title" id="recent"><?php _e('Recent Posts'); ?></h2>

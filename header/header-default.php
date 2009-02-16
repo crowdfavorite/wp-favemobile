@@ -36,7 +36,9 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 <?php
 
 is_page() ? $page = 'true' : $page = 'false';
-echo '	CFMOBI_IS_PAGE = '.$page.';';	
+echo '	CFMOBI_IS_PAGE = '.$page.';';
+echo '	CFMOBI_PAGES_TAB = '.str_replace("'", "\'", __('Pages', 'carrington-mobile')).';';
+echo '	CFMOBI_POSTS_TAB = '.str_replace("'", "\'", __('Recent Posts', 'carrington-mobile')).';';
 
 if (function_exists('cfmobi_check_mobile')) {
 	global $cfmobi_touch_browsers;
