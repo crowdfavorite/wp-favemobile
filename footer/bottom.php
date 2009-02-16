@@ -40,7 +40,7 @@ if (function_exists('cfmobi_mobile_exit')) {
 	<hr />
 
 	<p class="small">
-		Proudly powered by <a href="http://wordpress.org"><strong>WordPress</strong></a> and <a href="http://carringtontheme.com"><strong>Carrington</strong></a>.<br />
+		Proudly powered by <a href="http://wordpress.org"><strong>WordPress</strong></a> and <a href="http://carringtontheme.com"><strong>Carrington</strong></a>. <?php wp_loginout(); ?><br />
 <?php
 if (function_exists('cfmobi_mobile_exit')) {
 ?>
