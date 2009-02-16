@@ -59,7 +59,7 @@ add_filter('cfct_post_gallery_columns', 'cfct_mobile_post_gallery_columns');
 
 if (!is_admin()) {
 	wp_enqueue_script('jquery');
-	wp_enqueue_script('carrington-mobile', get_bloginfo('template_directory').'/js/mobile.js', 'jquery', '1.0');
+	wp_enqueue_script('carrington-mobile', get_bloginfo('template_directory').'/js/mobile.js', array('jquery'), '1.0');
 }
 
 include_once(CFCT_PATH.'carrington-core/carrington.php');
