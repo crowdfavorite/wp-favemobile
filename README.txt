@@ -143,7 +143,4 @@ Any .php files in the *plugins/* directory will be automatically loaded by Carri
 
 There is extra processing associated with the file system and context checks that Carrington requires. Because of this, use of a caching plugin is recommended.
 
-## Misc.
-
-Thanks to Scott Allan Wallick and the excellent Sandbox theme for code and inspiration.
 
