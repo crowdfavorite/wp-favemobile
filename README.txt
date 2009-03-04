@@ -1,4 +1,4 @@
-# Carrington Theme for WordPress
+# Carrington CMS Theme Framework for WordPress
 http://carringtontheme.com
 
 by Crowd Favorite  
@@ -12,7 +12,7 @@ http://www.opensource.org/licenses/gpl-license.php
 ## What is Carrington?
 
 1. An elegant, high-end WordPress theme for end-users.
-2. A developer friendly theme and conventions-based templating system.
+2. A designer and developer friendly theme and conventions-based templating system.
 3. A set of best practices for theme organization.
 
 ## Basic Theme Concept
@@ -112,7 +112,7 @@ Note: "default.php" is a supported default file name for all directories, howeve
 
 ## Actions and Filters
 
-Because Carrington is as much a theme framework as a theme itself, it includes a core set of functions that enable the override template hierarchy. These functions include actions and filters where appropriate so that their functionality can be customized and overridden as needed. Thess actions and filters use the same hook and filter system used in the WordPress core.
+Because Carrington a theme framework, it includes a core set of functions that enable the override template hierarchy. These functions include actions and filters where appropriate so that their functionality can be customized and overridden as needed. Thess actions and filters use the same hook and filter system used in the WordPress core.
 
 - `cfct_settings_form` (action) - allows you to add your own fields to the Carrington Settings form.
 - `cfct_settings_form_after` (action) - allows you to add your content after the Carrington Settings form. Useful if you want to add a second form to the page, or some other content.
