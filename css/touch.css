@@ -6,7 +6,7 @@ body {
 }
 ul.table.disclosure a,
 ul.table li.disclosure a {
-	background:url(../images/disclosure.png) no-repeat right center;
+	background:url(../img/disclosure.png) no-repeat right center;
 	padding:15px;
 }
 ul.table li .title {
