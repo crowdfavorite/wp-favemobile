@@ -32,27 +32,21 @@ if (empty($post->post_password) || $_COOKIE['wp-postpass_' . COOKIEHASH] == $pos
 <?php 
 
 if ($comments) {
-	$comment_count = 0;
-	$ping_count = 0;
-	foreach ($comments as $comment) {
-		if (get_comment_type() == 'comment') {
-			$comment_count++;
-		}
-		else {
-			$ping_count++;
-		}
-	}
-	if ($comment_count) {
-		cfct_template_file('comments', 'comments-loop');
-	}
-	if ($ping_count) {
-
 ?>
-<h3 class="pings"><?php _e('Continuing the Discussion', 'carrington-mobile'); ?></h3>
+	<ol class="commentlist">
 <?php
-
-		cfct_template_file('comments', 'pings-loop');
+	foreach ($comments as $comment) {
+?>
+		<li id="comment-<?php comment_ID() ?>">
+<?php
+		cfct_comment();
+?>
+		</li>
+<?php
 	}
+?>
+	</ol>
+<?php
 }
 
 cfct_form('comment'); 
