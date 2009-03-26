@@ -21,17 +21,12 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 get_header();
 
 ?>
-<div id="content">
-<p>Sorry, we're not sure what you're looking for here.</p>
+<div id="content" class="group">
 
-<?php
+<p><?php _e('Sorry, we\'re not sure what you\'re looking for here.', 'carrington-text'); ?></p>
 
-cfct_form('search');
-
-?>
 </div><!--#content-->
 <?php 
-get_sidebar();
 
 get_footer();
 
