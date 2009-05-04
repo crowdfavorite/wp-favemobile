@@ -23,6 +23,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 <?php
 the_content();
+link_pages('<p class="pages-link">'.__('Pages: ', 'carrington-mobile'), "</p>\n", 'number');
 ?>
 
 <div class="clear"></div>
