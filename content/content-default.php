@@ -23,7 +23,14 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 <?php
 the_content();
-link_pages('<p class="pages-link">'.__('Pages: ', 'carrington-mobile'), "</p>\n", 'number');
+
+$args = array(
+	'before' => '<p class="pages-link">'. __('Pages: ', 'carrington-mobile'),
+	'after' => "</p>\n",
+	'next_or_number' => 'number'
+);
+	
+wp_link_pages($args);
 ?>
 
 <div class="clear"></div>
