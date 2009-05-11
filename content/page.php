@@ -23,4 +23,12 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 <?php
 the_content();
+
+$args = array(
+	'before' => '<p class="pages-link">'. __('Pages: ', 'carrington-mobile'),
+	'after' => "</p>\n",
+	'next_or_number' => 'number'
+);
+	
+wp_link_pages($args);
 ?>
