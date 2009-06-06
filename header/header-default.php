@@ -49,6 +49,7 @@ if (!isset($cfmobi_touch_browsers) || !is_array($cfmobi_touch_browsers)) {
 		'BlackBerry9530',
 		'LG-TU915 Obigo', // LG touch browser
 		'LGE VX',
+		'webOS', // Palm Pre, etc.
 	);
 }
 if (count($cfmobi_touch_browsers)) {
