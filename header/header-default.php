@@ -24,8 +24,10 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<title><?php wp_title('&laquo;', true, 'right'); bloginfo('name'); ?></title>
 	<meta http-equiv="content-type" content="<?php bloginfo('html_type') ?>; charset=<?php bloginfo('charset') ?>" />
+	
+	<title><?php wp_title('&laquo;', true, 'right'); bloginfo('name'); ?></title>
+	
 	<meta name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
 	<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" media="screen" charset="utf-8" />
 	<style type="text/css">
