@@ -28,7 +28,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 	
 	<title><?php wp_title('&laquo;', true, 'right'); bloginfo('name'); ?></title>
 	
-	<meta name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
+	<meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
 	<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" media="screen" charset="utf-8" />
 	<style type="text/css">
 		@import url(<?php echo trailingslashit(get_bloginfo('template_url')).'css/advanced.css'; ?>);
