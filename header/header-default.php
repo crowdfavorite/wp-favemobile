@@ -88,6 +88,7 @@ echo trim(str_replace(
 
 ?>');
 	//--></script>
+<?php do_action('cfmobi_wp_head')?>
 </head>
 <body<?php if(is_single() || is_page()) {echo '';} else { echo ' id="is-list"';} ?>>
 
