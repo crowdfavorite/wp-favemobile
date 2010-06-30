@@ -31,12 +31,24 @@ $cfct_options = array(
 	, 'cfct_wp_footer'
 );
 
-function cfct_blog_init() {
+function cfct_mobile_init() {
 	if (cfct_get_option('cfct_ajax_load') == 'yes') {
 		cfct_ajax_load();
 	}
 }
-add_action('init', 'cfct_blog_init');
+add_action('init', 'cfct_mobile_init');
+
+function cfct_mobile_wp() {
+	if (!is_admin()) {
+		wp_enqueue_script('jquery');
+		wp_enqueue_script('carrington-mobile', get_bloginfo('template_directory').'/js/mobile.js', array('jquery'), '1.0');
+		
+		if ( is_singular() && get_option( 'thread_comments' ) ) {
+			wp_enqueue_script( 'comment-reply' );
+		}
+	}
+}
+add_action('wp', 'cfct_mobile_wp');
 
 function cfct_archive_title() {
 	if(is_author()) {
@@ -56,11 +68,6 @@ function cfct_mobile_post_gallery_columns($columns) {
 	return 1;
 }
 add_filter('cfct_post_gallery_columns', 'cfct_mobile_post_gallery_columns');
-
-if (!is_admin()) {
-	wp_enqueue_script('jquery');
-	wp_enqueue_script('carrington-mobile', get_bloginfo('template_directory').'/js/mobile.js', array('jquery'), '1.0');
-}
 
 include_once(CFCT_PATH.'carrington-core/carrington.php');
 

@@ -18,17 +18,14 @@
 if (__FILE__ == $_SERVER['SCRIPT_FILENAME']) { die(); }
 if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
-global $post, $comment;
-
-// Data passed through threaded callback for comment reply link
-extract($data);
 ?>
-<div class="comment" id="comment-<?php comment_ID(); ?>">
-	<?php if ($comment->comment_approved == '0') : ?>
-	<p><em>Your comment is awaiting moderation.</em></p>
-	<?php endif; ?>
 
-	<?php comment_text() ?>
-
-	<p class="comment-info">by <cite><?php comment_author_link() ?></cite> on <a href="#comment-<?php comment_ID() ?>"><?php comment_date('M j, Y') ?> at <?php comment_time() ?></a> <?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth'])), $comment, $post); ?> <?php edit_comment_link('e','',''); ?></small></p>
-</div>
+<li class="li-comment" id="li-comment-<?php comment_ID() ?>">
+	<div class="div-comment" id="div-comment-<?php comment_ID(); ?>">
+<?php
+cfct_comment($data);
+?>
+	</div>
+<?php
+// Dropped </li> is intentional: WordPress figures out where to place the </li> so it can nest comment lists.
+?>

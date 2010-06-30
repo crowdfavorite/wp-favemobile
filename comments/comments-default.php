@@ -18,38 +18,33 @@
 if (__FILE__ == $_SERVER['SCRIPT_FILENAME']) { die(); }
 if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
-global $post, $wp_query, $comments, $comment;
+// If post requires a password, don't show comments.
+if (post_password_required()) {
+	echo '<p>' . __( 'This post is password protected. Enter the password to view any comments.', 'carrington-mobile' ) . '</p>';
+	
+	return;
+}
 
-if (have_comments() || 'open' == $post->comment_status) {
-	if (empty($post->post_password) || $_COOKIE['wp-postpass_' . COOKIEHASH] == $post->post_password) {
-		$comments = $wp_query->comments;
-		$comment_count = count($comments);
-		$comment_count == 1 ? $comment_title = __('One Response', 'carrington-mobile') : $comment_title = sprintf(__('%d Responses', 'carrington-mobile'), $comment_count);
+// All clear? Ok, let's show comments.
+if (have_comments() || comments_open()) {
+?>
+
+<h2 id="comments" class="title-divider"><span><?php comments_number(__('No Responses Yet', 'carrington-mobile'), __('One Response', 'carrington-mobile'), __('% Responses', 'carrington-mobile')) ?></span></h2>
+
+<?php
+	if (have_comments()) {
+		echo '<ol class="commentlist">', wp_list_comments('callback=cfct_threaded_comment'), '</ol>';
 	}
+	cfct_form('comment');
 
+	// If there are multiple comment pages, and pagination is on.
+	if (get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) {
 ?>
-
-<h2 id="comments" class="title-divider"><span><?php echo $comment_title; ?></span></h2>
-
-<?php 
-
-	if ($comments) {
-?>
-	<ol class="commentlist">
-<?php
-		foreach ($comments as $comment) {
-?>
-		<li id="comment-<?php comment_ID() ?>">
-<?php
-			cfct_comment();
-?>
-		</li>
-<?php
-		}
-?>
-	</ol>
+		<div class="pagination">
+			<span class="next"><?php previous_comments_link( __( 'Older Comments', 'carrington-mobile' ) ); ?></span>
+			<span class="prev"><?php next_comments_link( __( 'Newer Comments <span class="meta-nav">&rarr;</span>', 'carrington-mobile' ) ); ?></span>
+		</div> <!-- .navigation -->
 <?php
 	}
-	cfct_form('comment'); 
 }
 ?>

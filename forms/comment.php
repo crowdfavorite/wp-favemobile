@@ -23,7 +23,7 @@ global $post, $user_ID, $user_identity, $comment_author, $comment_author_email, 
 $req = get_option('require_name_email');
 
 // if post is open to new comments
-if ('open' == $post->comment_status) {
+if (comments_open()) {
 	// if you need to be regestered to post comments..
 	if ( get_option('comment_registration') && !$user_ID ) { ?>
 
@@ -33,9 +33,9 @@ if ('open' == $post->comment_status) {
 	}
 	else { 
 ?>
-
-<form id="respond" action="<?php bloginfo('wpurl'); ?>/wp-comments-post.php" method="post">
-	<h3 class="title-divider"><span><?php _e('Leave a Reply', 'carrington-mobile'); ?></span></h3>
+<div id="respond">
+<form action="<?php bloginfo('wpurl'); ?>/wp-comments-post.php" method="post">
+	<h3 class="title-divider"><span><?php comment_form_title(__('Leave a Reply', 'carrington-mobile'), __('Reply to %s'), 'carrington-mobile'); ?></span></h3>
 	<?php // if you're logged in...
 			if ($user_ID) {
 	?>
@@ -67,12 +67,14 @@ if ('open' == $post->comment_status) {
 	<p><textarea name="comment" id="comment" rows="8" cols="40"></textarea></p>
 	<p>
 		<input name="submit" type="submit" id="submit" value="<?php _e('Submit comment', 'carrington-mobile'); ?>" tabindex="5" />
-		<input type="hidden" name="comment_post_ID" value="<?php echo $post->ID; ?>" />
+		<?php cancel_comment_reply_link('cancel reply'); ?>
 	</p>
 <?php
-do_action('comment_form', $post->ID);
+	comment_id_fields();
+	do_action('comment_form', $post->ID);
 ?>
 </form>
+</div>
 <?php 
 	} // If registration required and not logged in 
 } // If you delete this the sky will fall on your head
