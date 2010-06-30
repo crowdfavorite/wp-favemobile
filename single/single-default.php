@@ -21,7 +21,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 get_header();
 
 ?>
-<p id="next-prev-top" class="pagination"><?php cfct_misc('nav-single'); ?></p>
+<p class="pagination"><?php cfct_misc('nav-single'); ?></p>
 
 <div id="content" class="group">
 <?php

@@ -149,12 +149,20 @@ ul.table li .title {
 #navigation-top {
 	display:none;
 }
+
+.pagination {
+	margin:0 10px;
+}
+.group:not(.table) .pagination:last-child {
+	background: transparent;
+	border-width: 1px 0 0;
+	margin: 0 -10px -10px;
+}
 .pagination {
 	background:#fff;
 	border:1px solid #ccc;
 	border-width:0 1px 1px;
 	clear:both;
-	margin:0 10px;
 	overflow:hidden;
 }
 .pagination span {

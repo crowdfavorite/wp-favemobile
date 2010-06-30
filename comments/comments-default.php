@@ -40,10 +40,10 @@ if (have_comments() || comments_open()) {
 	// If there are multiple comment pages, and pagination is on.
 	if (get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) {
 ?>
-		<div class="pagination">
+		<p class="pagination">
 			<span class="next"><?php previous_comments_link( __( 'Older Comments', 'carrington-mobile' ) ); ?></span>
 			<span class="prev"><?php next_comments_link( __( 'Newer Comments <span class="meta-nav">&rarr;</span>', 'carrington-mobile' ) ); ?></span>
-		</div> <!-- .navigation -->
+		</p>
 <?php
 	}
 }
