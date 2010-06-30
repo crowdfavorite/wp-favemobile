@@ -241,13 +241,15 @@ ul.table.disclosure .pagination .prev a {
 	background-color:#fff;
 	background-image:url(../img/tab-active.gif);
 }
+
 .commentlist {
 	margin:0 -10px;
 }
-.commentlist li {
+.commentlist .li-comment {
 	background:url(../img/comment.png) no-repeat 10px 10px;
 	border-bottom:1px solid #ddd;
 	font-size:11px;
+	list-style: none;
 	margin:0;
 	padding:10px 10px 10px 30px;
 }
@@ -256,8 +258,18 @@ ul.table.disclosure .pagination .prev a {
 	color:#999;
 	margin:0;
 }
-.commentlist li .comment-info cite {
+.commentlist .comment-info cite {
 	font-weight:bold;
+}
+.commentlist .children {
+	margin: 10px 0 0;
+}
+.commentlist .children .li-comment {
+	background-position: 0 10px;
+	border: 0;
+	margin-bottom: 10px;
+	padding-bottom: 0;
+	padding-left: 20px;
 }
 #respond .title-divider {
 	margin-bottom:5px;
