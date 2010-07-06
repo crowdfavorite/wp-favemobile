@@ -18,14 +18,18 @@
 if (__FILE__ == $_SERVER['SCRIPT_FILENAME']) { die(); }
 if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
-global $post, $user_ID, $user_identity, $comment_author, $comment_author_email, $comment_author_url;
+global $post, $user_identity;
+
+$commenter = wp_get_current_commenter();
+
+extract($commenter);
 
 $req = get_option('require_name_email');
 
 // if post is open to new comments
 if (comments_open()) {
 	// if you need to be regestered to post comments..
-	if ( get_option('comment_registration') && !$user_ID ) { ?>
+	if ( get_option('comment_registration') && !is_user_logged_in() ) { ?>
 
 <p id="you-must-be-logged-in-to-comment"><?php printf(__('You must be <a href="%s">logged in</a> to post a comment.', 'carrington-mobile'), get_bloginfo('wpurl').'/wp-login.php?redirect_to='.get_permalink()); ?></p>
 
@@ -37,7 +41,7 @@ if (comments_open()) {
 <form action="<?php bloginfo('wpurl'); ?>/wp-comments-post.php" method="post">
 	<h3 class="title-divider"><span><?php comment_form_title(__('Leave a Reply', 'carrington-mobile'), __('Reply to %s'), 'carrington-mobile'); ?></span></h3>
 	<?php // if you're logged in...
-			if ($user_ID) {
+			if (is_user_logged_in()) {
 	?>
 		<p><?php printf(__('Logged in as <a href="%s">%s</a>. ', 'carrington-mobile'), get_bloginfo('wpurl').'/wp-admin/profile.php', $user_identity); wp_loginout() ?></p>
 	<?php
