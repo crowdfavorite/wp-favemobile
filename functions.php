@@ -31,13 +31,6 @@ $cfct_options = array(
 	, 'cfct_wp_footer'
 );
 
-function cfct_mobile_init() {
-	if (cfct_get_option('cfct_ajax_load') == 'yes') {
-		cfct_ajax_load();
-	}
-}
-add_action('init', 'cfct_mobile_init');
-
 function cfct_mobile_wp() {
 	if (!is_admin()) {
 		wp_enqueue_script('jquery');
