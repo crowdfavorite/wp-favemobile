@@ -22,7 +22,7 @@ get_header();
 
 $s = get_query_var('s');
 
-$search_title = '<a href="'.esc_attr(site_url('?s='.$s).'">'.esc_html($s).'</a>';
+$search_title = '<a href="'.esc_attr(site_url('?s='.$s)).'">'.esc_html($s).'</a>';
 
 ?>
 
