@@ -20,5 +20,5 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 ?>
 <html>
-<body><?php echo htmlspecialchars($str); ?></body>
+<body><?php echo esc_html($str); ?></body>
 </html>

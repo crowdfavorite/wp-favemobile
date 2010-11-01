@@ -21,11 +21,12 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 cfct_form('search');
 
 ?>
-<hr />
 
+<hr />
+	
 	<h2 id="pages" class="table-title"><?php _e('Pages'); ?></h2>
 	<ul class="disclosure table group">
-		<?php wp_list_pages('title_li=&depth=1&child_of='.$parent); ?>
+		<?php wp_list_pages('title_li=&depth=1&child_of=0') ?>
 	</ul>
 
 <hr />
