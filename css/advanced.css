@@ -280,6 +280,9 @@ ul.table.disclosure .pagination .prev a {
 #respond input[type=text] {
 	width:95%;
 }
+#cancel-comment-reply-link {
+	font-size: 11px;
+}
 
 #footer {
 	background:#555 url(../img/footer-shadow.gif) repeat-x top;

@@ -35,7 +35,8 @@ if (have_comments() || comments_open()) {
 	if (have_comments()) {
 		echo '<ol class="commentlist">', wp_list_comments('callback=cfct_threaded_comment'), '</ol>';
 	}
-	cfct_form('comment');
+	
+	comment_form();
 
 	// If there are multiple comment pages, and pagination is on.
 	if (get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) {
