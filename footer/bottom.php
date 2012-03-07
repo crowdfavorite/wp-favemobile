@@ -1,9 +1,8 @@
 <?php
 
-// This file is part of the Carrington Mobile Theme for WordPress
-// http://carringtontheme.com
+// This file is part of the FaveMobile Theme for WordPress
 //
-// Copyright (c) 2008-2010 Crowd Favorite, Ltd. All rights reserved.
+// Copyright (c) 2008-2012 Crowd Favorite, Ltd. All rights reserved.
 // http://crowdfavorite.com
 //
 // Released under the GPL license
@@ -40,11 +39,11 @@ if (function_exists('cfmobi_mobile_exit')) {
 	<hr />
 
 	<p class="small">
-		Proudly powered by <a href="http://wordpress.org"><strong>WordPress</strong></a> and <a href="http://carringtontheme.com"><strong>Carrington</strong></a>. <?php wp_loginout(); wp_register(' | ', ''); ?><br />
+		<?php _e('Proudly powered by <a href="http://wordpress.org/" rel="generator">WordPress</a> and <a href="http://crowdfavorite.com/wordpress/carrington/">Carrington</a>.', 'carrington-mobile');  wp_loginout(); wp_register(' | ', ''); ?>
 <?php
 if (function_exists('cfmobi_mobile_exit')) {
 ?>
-		<a href="http://crowdfavorite.com/wordpress">WordPress Mobile Edition</a> available from Crowd Favorite.
+		<br /><a href="http://crowdfavorite.com/wordpress">WordPress Mobile Edition</a> available from Crowd Favorite.
 <?php
 }
 ?>
@@ -52,7 +51,7 @@ if (function_exists('cfmobi_mobile_exit')) {
 <?php
 if (cfct_get_option('cfct_credit') == 'yes') {
 ?>
-	<p id="developer-link"><?php printf(__('<a href="http://crowdfavorite.com" title="Custom WordPress development, design and backup services." rel="developer designer">%s</a>', 'carrington-mobile'), 'Carrington Theme by Crowd Favorite'); ?></p>
+	<p id="developer-link">?php printf(__('<a href="http://crowdfavorite.com/wordpress/themes/favemobile/">%s</a> by <a href="http://crowdfavorite.com" title="Custom WordPress development, design and consulting services." rel="developer designer">%s</a>', 'carrington-mobile'), 'FaveMobile', 'Crowd Favorite'); ?></p>
 <?php
 }
 ?>
