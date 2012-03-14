@@ -215,7 +215,10 @@ ul.table.disclosure .pagination .prev a {
 #s {
 	width: 50%;
 }
-
+.sticky {
+	border:1px solid #ddd;
+	padding:10px;
+}
 .tabbed.group {
 	padding:0;
 }
