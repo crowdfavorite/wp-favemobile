@@ -21,7 +21,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 ?>
 <!DOCTYPE html>
 
-<html>
+<html <?php language_attributes(); ?>>
 <head>
 	<meta http-equiv="content-type" content="<?php bloginfo('html_type') ?>; charset=<?php bloginfo('charset') ?>" />
 	
@@ -89,9 +89,9 @@ echo trim(str_replace(
 	//--></script>
 <?php do_action('cfmobi_wp_head'); ?>
 </head>
-<body<?php if(is_single() || is_page()) {echo '';} else { echo ' id="is-list"';} ?>>
+<body <?php if(is_single() || is_page()) {echo '';} else { echo ' id="is-list"';} body_class( $class ); ?>>
 
-<h1 id="site-name"><a rel="home" href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
+<h1 id="site-name"><a rel="home" href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
 
 <hr />
 

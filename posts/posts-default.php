@@ -22,7 +22,7 @@ get_header();
 
 ?>
 
-<div id="content">
+<div id="content" <!-- <?php post_class(); ?> -->>
 <?php
 	cfct_loop();
 ?>

@@ -23,7 +23,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 <hr />
 
 <div class="group">
-	<form id="search" action="<?php bloginfo('home'); ?>" method="get">
+	<form id="search" action="<?php echo home_url(); ?>" method="get">
 		<div>
 			<input type="text" name="s" id="s" inputmode="predictOn" value="" />
 			<input type="submit" name="submit_button" value="Search" />

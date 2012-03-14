@@ -43,12 +43,12 @@ if (comments_open()) {
 	else { 
 ?>
 <div id="respond">
-<form action="<?php bloginfo('wpurl'); ?>/wp-comments-post.php" method="post">
+<form action="<?php echo site_url(); ?>/wp-comments-post.php" method="post">
 	<h3 class="title-divider"><span><?php comment_form_title(__('Leave a Reply', 'carrington-mobile'), __('Reply to %s'), 'carrington-mobile'); ?></span></h3>
 	<?php // if you're logged in...
 			if (is_user_logged_in()) {
 	?>
-		<p><?php printf(__('Logged in as <a href="%s">%s</a>. ', 'carrington-mobile'), get_bloginfo('wpurl').'/wp-admin/profile.php', $user_identity); wp_loginout() ?></p>
+		<p><?php printf(__('Logged in as <a href="%s">%s</a>. ', 'carrington-mobile'), echo site_url().'/wp-admin/profile.php', $user_identity); wp_loginout() ?></p>
 	<?php
 			} else { 
 	?>

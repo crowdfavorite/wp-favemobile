@@ -26,6 +26,9 @@ define('CFCT_HOME_LATEST_LENGTH', 250);
 
 include_once(CFCT_PATH.'carrington-core/carrington.php');
 
+// Registering sidebars to keep Wordpress Happy
+if (function_exists('register_sidebar')) {register_sidebar(array());}
+
 $cfct_options = array(
 	'cfct_about_text'
 	, 'cfct_credit'
@@ -36,7 +39,7 @@ $cfct_options = array(
 function cfct_mobile_wp() {
 	if (!is_admin()) {
 		wp_enqueue_script('jquery');
-		wp_enqueue_script('carrington-mobile', get_bloginfo('template_directory').'/js/mobile.js', array('jquery'), '1.0');
+		wp_enqueue_script('carrington-mobile', get_template_directory_uri().'/js/mobile.js', array('jquery'), '1.0');
 		
 		if ( is_singular() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
@@ -44,6 +47,11 @@ function cfct_mobile_wp() {
 	}
 }
 add_action('wp', 'cfct_mobile_wp');
+
+add_theme_support( 'automatic-feed-links' );
+
+// If the content width is not yet set, define it as 480px. (Width of portrait mode iPhone 4)
+if ( ! isset( $content_width ) ) $content_width = 480;
 
 function cfct_archive_title() {
 	if(is_author()) {

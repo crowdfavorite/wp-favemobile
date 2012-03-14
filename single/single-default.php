@@ -37,6 +37,9 @@ comments_template();
 
 <?php 
 
+// Although there is no sidebar, this is required by Wordpress.
+if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Primary Sidebar') ) {}
+
 get_footer();
 
 ?>
