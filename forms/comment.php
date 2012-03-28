@@ -44,7 +44,7 @@ if (comments_open()) {
 ?>
 <div id="respond">
 <form action="<?php echo site_url(); ?>/wp-comments-post.php" method="post">
-	<h3 class="title-divider"><span><?php comment_form_title(__('Leave a Reply', 'fave-mobile'), __('Reply to %s'), 'fave-mobile'); ?></span></h3>
+	<h3 class="title-divider"><span><?php comment_form_title(__('Leave a Reply', 'fave-mobile'), __('Reply to %s','fave-mobile'), 'fave-mobile'); ?></span></h3>
 	<?php // if you're logged in...
 			if (is_user_logged_in()) {
 	?>

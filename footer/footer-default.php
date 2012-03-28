@@ -41,14 +41,14 @@ if (!empty($sub_pages)) {
 <div class="tabbed">
 	<div id="recent_tab">
 		<hr />
-		<h2 class="table-title" id="recent"><?php _e('Recent Posts'); ?></h2>
+		<h2 class="table-title" id="recent"><?php _e('Recent Posts','fave-mobile'); ?></h2>
 		<ul class="disclosure table group">
 			<?php wp_get_archives('type=postbypost&limit=10'); ?>
 		</ul>
 	</div>
 	<div id="pages_tab">
 		<hr />
-		<h2 class="table-title" id="pages"><?php _e('Pages'); ?></h2>
+		<h2 class="table-title" id="pages"><?php _e('Pages','fave-mobile'); ?></h2>
 		<ul class="disclosure table group">
 			<?php echo $sub_pages; wp_list_pages('title_li=&depth=1'); ?>
 		</ul>

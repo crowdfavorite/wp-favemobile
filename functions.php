@@ -60,13 +60,13 @@ if ( ! isset( $content_width ) ) $content_width = 480;
 
 function cfct_archive_title() {
 	if(is_author()) {
-		$output = __('Posts by:');
+		$output = __('Posts by:','fave-mobile');
 	} elseif(is_category()) {
-		$output = __('Category Archives:');
+		$output = __('Category Archives:','fave-mobile');
 	} elseif(is_tag()) {
-		$output = __('Tag Archives:');
+		$output = __('Tag Archives:','fave-mobile');
 	} elseif(is_archive()) {
-		$output = __('Archives:');
+		$output = __('Archives:','fave-mobile');
 	}
 	$output .= ' ';
 	echo $output;
@@ -147,7 +147,7 @@ class CFCT_OB_On_Action {
  * Usage: CFCT_Comment_Form::setup();
  */
 class CFCT_Comment_Form {
-	public static $i18n = 'fave-mobile';
+	public static $i18n = 'Favorite-mobile';
 	protected static $instance;
 	protected static $hooks_attached = false;
 	

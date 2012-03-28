@@ -39,4 +39,4 @@ wp_link_pages($args);
 
 <?php the_tags('<p class="tags small">Tags: ',', ','</p>'); ?>
 
-<p class="categories small"><?php _e('Categories: '); the_category(', '); ?></p>
+<p class="categories small"><?php _e('Categories: ','fave-mobile'); the_category(', '); ?></p>
