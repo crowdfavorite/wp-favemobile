@@ -32,7 +32,7 @@ if (is_page()) {
 }
 
 if (!empty($sub_pages)) {
-	$sub_pages = '<li><strong class="title">'.__('Sub Pages', 'carrington-mobile').'</strong></li>'.$sub_pages.'<li><strong class="title">'.__('Top Level Pages', 'carrington-mobile').'</strong></li>';
+	$sub_pages = '<li><strong class="title">'.__('Sub Pages', 'fave-mobile').'</strong></li>'.$sub_pages.'<li><strong class="title">'.__('Top Level Pages', 'fave-mobile').'</strong></li>';
 }
 
 ?>

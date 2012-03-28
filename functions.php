@@ -17,13 +17,18 @@
 
 if (__FILE__ == $_SERVER['SCRIPT_FILENAME']) { die(); }
 
-load_theme_textdomain('carrington-mobile');
+load_theme_textdomain('fave-mobile');
 
+/**
+ * Set this to "true" to turn on debugging mode.
+ * Debug helps with development by showing you the paths of the files loaded by Carrington.
+ */
 define('CFCT_DEBUG', false);
 define('CFCT_PATH', trailingslashit(TEMPLATEPATH));
 define('CFCT_HOME_LIST_LENGTH', 5);
 define('CFCT_HOME_LATEST_LENGTH', 250);
 
+// Including the Carrington Core framework
 include_once(CFCT_PATH.'carrington-core/carrington.php');
 
 // Registering sidebars to keep Wordpress Happy
@@ -142,7 +147,7 @@ class CFCT_OB_On_Action {
  * Usage: CFCT_Comment_Form::setup();
  */
 class CFCT_Comment_Form {
-	public static $i18n = 'carrington-mobile';
+	public static $i18n = 'fave-mobile';
 	protected static $instance;
 	protected static $hooks_attached = false;
 	

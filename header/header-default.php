@@ -38,8 +38,8 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 is_page() ? $page = 'true' : $page = 'false';
 echo '	CFMOBI_IS_PAGE = '.$page.';';
-echo "	CFMOBI_PAGES_TAB = '".str_replace("'", "\'", __('Pages', 'carrington-mobile'))."';";
-echo "	CFMOBI_POSTS_TAB = '".str_replace("'", "\'", __('Recent Posts', 'carrington-mobile'))."';";
+echo "	CFMOBI_PAGES_TAB = '".str_replace("'", "\'", __('Pages', 'fave-mobile'))."';";
+echo "	CFMOBI_POSTS_TAB = '".str_replace("'", "\'", __('Recent Posts', 'fave-mobile'))."';";
 
 global $cfmobi_touch_browsers;
 if (!isset($cfmobi_touch_browsers) || !is_array($cfmobi_touch_browsers)) {

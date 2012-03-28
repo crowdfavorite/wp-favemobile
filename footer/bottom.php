@@ -22,7 +22,7 @@ $about_text = cfct_about_text();
 if (!empty($about_text)) {
 ?>
 <div id="about" class="group">
-	<h3><?php printf(__('About %s', 'carrington-mobile'), get_bloginfo('name')); ?></h3>
+	<h3><?php printf(__('About %s', 'fave-mobile'), get_bloginfo('name')); ?></h3>
 <?php
 	echo $about_text;
 ?>
@@ -52,7 +52,7 @@ if (function_exists('cfmobi_mobile_exit')) {
 <?php
 if (cfct_get_option('cfct_credit') == 'yes') {
 ?>
-	<p id="developer-link"><?php printf(__('<a href="http://crowdfavorite.com" title="Custom WordPress development, design and backup services." rel="developer designer">%s</a>', 'carrington-mobile'), 'Carrington Theme by Crowd Favorite'); ?></p>
+	<p id="developer-link"><?php printf(__('<a href="http://crowdfavorite.com" title="Custom WordPress development, design and backup services." rel="developer designer">%s</a>', 'fave-mobile'), 'Carrington Theme by Crowd Favorite'); ?></p>
 <?php
 }
 ?>

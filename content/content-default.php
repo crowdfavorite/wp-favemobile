@@ -25,7 +25,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 the_content();
 
 $args = array(
-	'before' => '<p class="pages-link">'. __('Pages: ', 'carrington-mobile'),
+	'before' => '<p class="pages-link">'. __('Pages: ', 'fave-mobile'),
 	'after' => "</p>\n",
 	'next_or_number' => 'number'
 );

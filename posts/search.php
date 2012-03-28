@@ -27,7 +27,7 @@ $search_title = '<a href="'.esc_attr(site_url('?s='.$s)).'">'.esc_html($s).'</a>
 ?>
 
 <div id="content">
-	<h1 class="table-title"><?php printf(__('Search Results for: %s', 'carrington-blog'), $search_title); ?></h1>
+	<h1 class="table-title"><?php printf(__('Search Results for: %s', 'fave-blog'), $search_title); ?></h1>
 <?php
 	cfct_loop();
 ?>

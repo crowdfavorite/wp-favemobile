@@ -30,11 +30,15 @@ License URI: license.txt
 body {
 	font-family: Verdana, sans-serif;
 }
-h1, h2, h3, p {
+h1, 
+h2, 
+h3, 
+p {
 	margin: 0 0 5px 0;
 	padding: 0;
 }
-ul, ol {
+ul, 
+ol {
 	margin-top: 0;
 	margin-bottom: 5px;
 	margin-left:10px;

@@ -32,7 +32,8 @@ blockquote {
 	margin:0 0 0 5px;
 	padding-left:5px;
 }
-ul, ol {
+ul, 
+ol {
 	margin-left: 40px;
 }
 p, li {
@@ -81,7 +82,9 @@ ul.table li {
 	border-bottom:1px solid #ccc;
 	padding:15px;
 }
-ul.table li:last-child {border:0;}
+ul.table li:last-child {
+	border:0;
+}
 ul.table.disclosure li,
 ul.table li.disclosure {
 	margin: 0;

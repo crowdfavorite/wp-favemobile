@@ -20,7 +20,7 @@ if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
 // If post requires a password, don't show comments.
 if (post_password_required()) {
-	echo '<p>' . __( 'This post is password protected. Enter the password to view any comments.', 'carrington-mobile' ) . '</p>';
+	echo '<p>' . __( 'This post is password protected. Enter the password to view any comments.', 'fave-mobile' ) . '</p>';
 	
 	return;
 }
@@ -29,7 +29,7 @@ if (post_password_required()) {
 if (have_comments() || comments_open()) {
 ?>
 
-<h2 id="comments" class="title-divider"><span><?php comments_number(__('No Responses Yet', 'carrington-mobile'), __('One Response', 'carrington-mobile'), __('% Responses', 'carrington-mobile')) ?></span></h2>
+<h2 id="comments" class="title-divider"><span><?php comments_number(__('No Responses Yet', 'fave-mobile'), __('One Response', 'fave-mobile'), __('% Responses', 'fave-mobile')) ?></span></h2>
 
 <?php
 	if (have_comments()) {
@@ -42,8 +42,8 @@ if (have_comments() || comments_open()) {
 	if (get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) {
 ?>
 		<p class="pagination">
-			<span class="next"><?php previous_comments_link( __( 'Older Comments', 'carrington-mobile' ) ); ?></span>
-			<span class="prev"><?php next_comments_link( __( 'Newer Comments <span class="meta-nav">&rarr;</span>', 'carrington-mobile' ) ); ?></span>
+			<span class="next"><?php previous_comments_link( __( 'Older Comments', 'fave-mobile' ) ); ?></span>
+			<span class="prev"><?php next_comments_link( __( 'Newer Comments <span class="meta-nav">&rarr;</span>', 'fave-mobile' ) ); ?></span>
 		</p>
 <?php
 	}

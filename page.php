@@ -16,7 +16,24 @@
 // **********************************************************************
 
 if (__FILE__ == $_SERVER['SCRIPT_FILENAME']) { die(); }
+if (CFCT_DEBUG) { cfct_banner(__FILE__); }
 
-cfct_page();
+get_header();
+
+?>
+
+<div id="content" class="group">
+<?php
+
+cfct_loop();
+
+comments_template();
+
+?>
+</div><!--#content-->
+
+<?php 
+
+get_footer();
 
 ?>
